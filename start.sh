@@ -24,9 +24,6 @@ if [ "$FORCE_REBUILD" = "true" ]; then
   echo "Forzando actualización de GTFS..."
   aws s3 cp "s3://$R2_BUCKET/gtfs.zip" "$OTP_DIR/gtfs.zip" \
     --endpoint-url="$R2_ENDPOINT"
-
-  echo "Eliminando graph.obj anterior..."
-  rm -f "$OTP_DIR/graph.obj"
 fi
 
 if [ ! -f "$OTP_DIR/graph.obj" ]; then

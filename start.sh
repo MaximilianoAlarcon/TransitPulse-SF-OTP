@@ -21,7 +21,7 @@ fi
 
 if [ ! -f "$OTP_DIR/graph.obj" ]; then
   echo "Construyendo graph.obj..."
-  java $JAVA_BUILD_OPTS -jar /app/otp.jar --build "$OTP_DIR"
+  java $JAVA_BUILD_OPTS -jar /app/otp.jar --build --save "$OTP_DIR"
 fi
 
 echo "Iniciando OTP..."

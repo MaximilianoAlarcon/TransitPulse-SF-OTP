@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y awscli curl && rm -rf /var/lib/apt/lists/*
 
-ADD https://repo1.maven.org/maven2/org/opentripplanner/otp/2.7.0/otp-2.7.0-shaded.jar /app/otp.jar
+ADD https://repo1.maven.org/maven2/org/opentripplanner/otp-shaded/2.7.0/otp-shaded-2.7.0.jar /app/otp.jar
 
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh

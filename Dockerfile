@@ -9,7 +9,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     && ./aws/install \
     && rm -rf aws awscliv2.zip
 
-ADD https://repo1.maven.org/maven2/org/opentripplanner/otp-shaded/2.7.0/otp-shaded-2.7.0.jar /app/otp.jar
+ADD https://repo1.maven.org/maven2/org/opentripplanner/otp-shaded/2.8.1/otp-shaded-2.8.1.jar /app/otp.jar
 
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
